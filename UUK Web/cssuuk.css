@@ -1,0 +1,339 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url("Background Todoly.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #35445c;
+}
+
+.main-content {
+    margin-left: 17%;
+    padding: 45px 55px;
+
+    max-width: 1250px;
+}
+
+.greeting {
+    margin-bottom: 35px;
+}
+
+.greeting-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #526780;
+
+    margin-bottom: 3px;
+}
+
+.greeting h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #344d70;
+
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.greeting-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #687b95;
+}
+
+.progress-section {
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+
+    padding: 25px;
+    margin-bottom: 30px;
+
+    backdrop-filter: blur(12px);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.progress-header h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.progress-header p {
+    font-size: 12px;
+    color: #75869b;
+}
+
+.progress-percentage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.progress-percentage span {
+    font-size: 25px;
+    font-weight: 700;
+    color: #648dbb;
+}
+
+.progress-percentage small {
+    font-size: 11px;
+    color: #75869b;
+}
+
+
+/* PROGRESS BAR */
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5edf8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #a9c9f5;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    font-size: 11px;
+    color: #75869b;
+}
+
+
+.todo-container {
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+
+    padding: 25px;
+
+    backdrop-filter: blur(12px);
+}
+
+.add-task-section {
+    margin-bottom: 30px;
+}
+
+.add-task-section h2,
+.task-list-header h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #354b68;
+
+    margin-bottom: 6px;
+}
+
+.add-task-section p {
+    font-size: 12px;
+    color: #75869b;
+
+    margin-bottom: 18px;
+}
+
+.task-input-container {
+    display: flex;
+    gap: 12px;
+}
+
+.task-input-container input {
+    flex: 1;
+
+    padding: 13px 16px;
+
+    border: 1px solid #dce6f0;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    outline: none;
+
+    font-size: 12px;
+    color: #354b68;
+}
+
+.task-input-container input:focus {
+    border-color: #8bb2dc;
+}
+
+.task-input-container button {
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #82a9d2;
+    color: white;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.task-input-container button:hover {
+    background: #648dbb;
+}
+
+.task-list-section {
+    margin-top: 25px;
+}
+
+.task-list-header {
+    margin-bottom: 15px;
+}
+
+#task-list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#empty-message {
+    font-size: 12px;
+    color: #8998aa;
+    text-align: center;
+
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+
+    .main-content {
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+
+    .greeting h1 {
+        font-size: 34px;
+    }
+
+    .task-input-container {
+        flex-direction: column;
+    }
+
+    .task-input-container button {
+        width: 100%;
+    }
+
+}
+
+#task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 20px;
+    min-height: 65px;
+
+    background: rgba(255, 255, 255, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 16px;
+
+    box-shadow: 0 4px 12px rgba(120, 160, 210, 0.08);
+}
+
+.task-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+
+    border: 1.5px solid #b9c6d5;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.task-checkbox:checked {
+    background: #a9c9f5;
+    border-color: #a9c9f5;
+}
+
+.task-checkbox:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+}
+
+/* Nama task */
+.task-name {
+    flex: 1;
+    font-size: 15px;
+    color: #3f4650;
+    transition: 0.2s;
+}
+
+/* Nama task yang selesai */
+.task-name.completed {
+    text-decoration: line-through;
+    color: #858b94;
+}
+
+/* Tombol hapus */
+.delete-btn {
+    border: none;
+    background: transparent;
+    color: #aeb9c7;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    color: #e58d9b;
+    transform: scale(1.1);
+}
